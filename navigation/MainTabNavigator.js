@@ -30,14 +30,16 @@ export default TabNavigator(
         let iconName;
         switch (routeName) {
           case 'Home':
-            iconName = Platform.OS === 'ios'
-              ? `ios-home${focused ? '' : '-outline'}`
-              : 'md-home';
+            iconName =
+              Platform.OS === 'ios'
+                ? `ios-home${focused ? '' : '-outline'}`
+                : 'md-home';
             break;
           case 'Info':
-            iconName = Platform.OS === 'ios'
-              ? `ios-information-circle${focused ? '' : '-outline'}`
-              : 'md-information-circle';
+            iconName =
+              Platform.OS === 'ios'
+                ? `ios-information-circle${focused ? '' : '-outline'}`
+                : 'md-information-circle';
         }
         return (
           <Ionicons

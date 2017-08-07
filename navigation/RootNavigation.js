@@ -30,7 +30,7 @@ export default class RootNavigator extends React.Component {
   }
 
   render() {
-    return <MainTabNavigator navigation = {this.props.navigation} />;
+    return <MainTabNavigator navigation={this.props.navigation} />;
   }
 
   _registerForPushNotifications() {
