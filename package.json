@@ -6,8 +6,23 @@
   "license": "",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "test": "node ./node_modules/jest/bin/jest.js --watch"
+    "test": "node ./node_modules/jest/bin/jest.js --watch",
+    "flow": "flow",
+    "lint": "npm run lint:js",
+    "lint:eslint": "eslint --ignore-path .gitignore --ignore-pattern internals/scripts",
+    "lint:js": "npm run lint:eslint -- . ",
+    "lint:staged": "lint-staged",
+    "pretest": "npm run test:clean && npm run lint",
+    "test:clean": "rimraf ./coverage",
+    "storybook": "storybook start -p 7007",
+    "start": "concurrently --kill-others \"storybook start -p 7007\" \"react-native-scripts start\"",
+    "android": "concurrently --kill-others \"storybook start -p 7007\" \"react-native-scripts android\"",
+    "ios": "concurrently --kill-others \"storybook start -p 7007\" \"react-native-scripts ios\""
   },
+  "lint-staged": {
+    "*.js": "lint:eslint"
+  },
+  "pre-commit": "lint:staged",
   "jest": {
     "preset": "jest-expo"
   },
@@ -18,10 +33,31 @@
     "react-native": "https://github.com/expo/react-native/archive/sdk-19.0.0.tar.gz",
     "react-navigation": "^1.0.0-beta.12",
     "react-redux": "^5.0.5",
-    "redux": "^3.7.2"
+    "redux": "^3.7.2",
+    "redux-devtools-extension": "^2.13.2",
+    "redux-observable": "^0.14.1"
   },
   "devDependencies": {
+    "@storybook/react-native": "^3.2.3",
+    "babel-cli": "^6.24.1",
+    "babel-preset-flow": "^6.23.0",
+    "eslint": "^4.4.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-config-prettier": "^2.3.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-prettier": "^2.1.2",
+    "eslint-plugin-react": "^7.1.0",
+    "flow-bin": "^0.52.0",
+    "haul": "^1.0.0-beta.4",
     "jest-expo": "^19.0.5",
-    "redux-devtools": "^3.4.0"
-  }
+    "prettier": "^1.5.3",
+    "react-dom": "16.0.0-alpha.12",
+    "redux-devtools": "^3.4.0",
+    "rimraf": "^2.6.1",
+    "concurrently": "^3.4.0"
+  },
+  "presets": [
+    "flow"
+  ]
 }
