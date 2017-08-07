@@ -14,10 +14,7 @@
     "lint:staged": "lint-staged",
     "pretest": "npm run test:clean && npm run lint",
     "test:clean": "rimraf ./coverage",
-    "storybook": "storybook start -p 7007",
-    "start": "concurrently --kill-others \"storybook start -p 7007\" \"react-native-scripts start\"",
-    "android": "concurrently --kill-others \"storybook start -p 7007\" \"react-native-scripts android\"",
-    "ios": "concurrently --kill-others \"storybook start -p 7007\" \"react-native-scripts ios\""
+    "storybook": "storybook start -p 7007"
   },
   "lint-staged": {
     "*.js": "lint:eslint"
@@ -38,7 +35,6 @@
     "redux-observable": "^0.14.1"
   },
   "devDependencies": {
-    "@storybook/react-native": "^3.2.3",
     "babel-cli": "^6.24.1",
     "babel-eslint": "^7.2.3",
     "babel-preset-flow": "^6.23.0",
@@ -57,7 +53,8 @@
     "prettier": "^1.5.3",
     "react-dom": "16.0.0-alpha.12",
     "redux-devtools": "^3.4.0",
-    "rimraf": "^2.6.1"
+    "rimraf": "^2.6.1",
+    "@storybook/react-native": "^3.2.3"
   },
   "presets": [
     "flow"
