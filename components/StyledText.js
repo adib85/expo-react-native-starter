@@ -1,3 +1,5 @@
+/* eslint-disable react/prefer-stateless-function, react/prop-types */
+
 import React from 'react';
 import { Text } from 'react-native';
 

@@ -1,27 +1,30 @@
+/* eslint-disable global-require, no-console, react/prop-types, react/sort-comp, no-else-return */
+
 /**
  * App
  *
  * @flow
  */
 
-// import StorybookUI from './storybook';
-//
-// import App from './app';
-//
-// module.exports = __DEV__ ? StorybookUI : App;
+/*
+ * uncomment for storybook
+ *
+import StorybookUI from './storybook';
 
+import App from './app';
+
+module.exports = __DEV__ ? StorybookUI : App;
+*/
 
 import React from 'react';
 import { Platform, StatusBar, StyleSheet, View } from 'react-native';
 import { AppLoading, Asset, Font } from 'expo';
 import { Ionicons } from '@expo/vector-icons';
-import RootNavigation from './navigation/RootNavigation';
-import AppWithNavigationState from './navigation/AppWithNavigationState';
 
-import { AppRegistry } from 'react-native';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
 
+// import RootNavigation from './navigation/RootNavigation';
+import AppWithNavigationState from './navigation/AppWithNavigationState';
 import configureStore from './configureStore';
 
 export default class App extends React.Component {
@@ -32,27 +35,10 @@ export default class App extends React.Component {
   };
 
   componentWillMount() {
-    this._loadAssetsAsync();
+    this.loadAssetsAsync();
   }
 
-  render() {
-    if (!this.state.assetsAreLoaded && !this.props.skipLoadingScreen) {
-      return <AppLoading />;
-    } else {
-      return (
-        <Provider store={this.store}>
-          <View style={styles.container}>
-            {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
-            {Platform.OS === 'android' &&
-              <View style={styles.statusBarUnderlay} />}
-            <AppWithNavigationState />
-          </View>
-        </Provider>
-      );
-    }
-  }
-
-  async _loadAssetsAsync() {
+  async loadAssetsAsync() {
     try {
       await Promise.all([
         Asset.loadAsync([
@@ -77,6 +63,23 @@ export default class App extends React.Component {
       console.log(e);
     } finally {
       this.setState({ assetsAreLoaded: true });
+    }
+  }
+
+  render() {
+    if (!this.state.assetsAreLoaded && !this.props.skipLoadingScreen) {
+      return <AppLoading />;
+    } else {
+      return (
+        <Provider store={this.store}>
+          <View style={styles.container}>
+            {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
+            {Platform.OS === 'android' &&
+              <View style={styles.statusBarUnderlay} />}
+            <AppWithNavigationState />
+          </View>
+        </Provider>
+      );
     }
   }
 }
