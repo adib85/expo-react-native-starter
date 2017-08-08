@@ -1,8 +1,16 @@
+/**
+ * App
+ *
+ * @flow
+ */
+
 // import StorybookUI from './storybook';
 //
 // import App from './app';
 //
 // module.exports = __DEV__ ? StorybookUI : App;
+
+
 import React from 'react';
 import { Platform, StatusBar, StyleSheet, View } from 'react-native';
 import { AppLoading, Asset, Font } from 'expo';
@@ -33,7 +41,6 @@ export default class App extends React.Component {
     } else {
       return (
         <Provider store={this.store}>
-
           <View style={styles.container}>
             {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
             {Platform.OS === 'android' &&

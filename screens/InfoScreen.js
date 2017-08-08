@@ -1,6 +1,14 @@
 import React from 'react';
 import { ExpoConfigView } from '@expo/samples';
 
+
+// flow
+function square(n: number): number {
+  return n * n;
+}
+
+square("2ss"); // Error!
+
 export default class InfoScreen extends React.Component {
   static navigationOptions = {
     title: 'Info',
