@@ -4,7 +4,7 @@
   "description": "Hello Expo!",
   "author": null,
   "license": "",
-  "main": "node_modules/expo/AppEntry.js",
+  "main": "main.js",
   "scripts": {
     "test:clean": "rimraf ./coverage",
     "test": "node ./node_modules/jest/bin/jest.js --coverage",
@@ -25,12 +25,8 @@
   "jest": {
     "preset": "jest-expo",
     "collectCoverageFrom": [
-      "screens/**/*.{js,jsx}",
-      "!screens/**/*.test.{js,jsx}",
-      "components/**/*.{js,jsx}",
-      "!components/**/*.test.{js,jsx}",
-      "redux/**/*.{js,jsx}",
-      "!redux/**/*.test.{js,jsx}"
+      "app/**/*.{js,jsx}",
+      "!app/**/*.test.{js,jsx}"
     ],
     "coverageThreshold": {
       "global": {
