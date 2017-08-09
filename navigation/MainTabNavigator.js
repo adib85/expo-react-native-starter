@@ -1,5 +1,8 @@
+/*  eslint-disable react/prop-types, default-case */
+
 /**
  * TabNavigator
+ *
  *
  * @flow
  */

@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+
 import { Notifications } from 'expo';
 import React from 'react';
 // import { StackNavigator } from 'react-navigation';

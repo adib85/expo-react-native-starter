@@ -6,7 +6,9 @@
   "license": "",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "test": "node ./node_modules/jest/bin/jest.js --watch",
+    "test:clean": "rimraf ./coverage",
+    "test": "node ./node_modules/jest/bin/jest.js --coverage",
+    "test:watch": "node ./node_modules/jest/bin/jest.js --watchAll",
     "flow": "flow",
     "lint": "npm run lint:js",
     "lint:eslint": "eslint --ignore-path .gitignore --ignore-pattern internals/scripts",
@@ -21,7 +23,23 @@
   },
   "pre-commit": "lint:staged",
   "jest": {
-    "preset": "jest-expo"
+    "preset": "jest-expo",
+    "collectCoverageFrom": [
+      "screens/**/*.{js,jsx}",
+      "!screens/**/*.test.{js,jsx}",
+      "components/**/*.{js,jsx}",
+      "!components/**/*.test.{js,jsx}",
+      "redux/**/*.{js,jsx}",
+      "!redux/**/*.test.{js,jsx}"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 98,
+        "branches": 91,
+        "functions": 98,
+        "lines": 98
+      }
+    }
   },
   "dependencies": {
     "@expo/samples": "^2.0.2",
