@@ -7,15 +7,13 @@
   "main": "main.js",
   "scripts": {
     "test:clean": "rimraf ./coverage",
-    "test": "node ./node_modules/jest/bin/jest.js --coverage",
-    "test:watch": "node ./node_modules/jest/bin/jest.js --watchAll",
+    "test": "node_modules/jest/bin/jest.js --coverage",
     "flow": "flow",
     "lint": "npm run lint:js",
     "lint:eslint": "eslint --ignore-path .gitignore --ignore-pattern internals/scripts",
     "lint:js": "npm run lint:eslint -- . ",
     "lint:staged": "lint-staged",
     "pretest": "npm run test:clean && npm run lint",
-    "test:clean": "rimraf ./coverage",
     "storybook": "storybook start -p 7007"
   },
   "lint-staged": {
@@ -24,10 +22,6 @@
   "pre-commit": "lint:staged",
   "jest": {
     "preset": "jest-expo",
-    "collectCoverageFrom": [
-      "app/**/*.{js,jsx}",
-      "!app/**/*.test.{js,jsx}"
-    ],
     "coverageThreshold": {
       "global": {
         "statements": 98,
@@ -35,7 +29,12 @@
         "functions": 98,
         "lines": 98
       }
-    }
+    },
+    "collectCoverageFrom": [
+      "app/**/*.{js,jsx}",
+      "!app/**/*.test.{js,jsx}",
+      "!app/navigation/*"
+    ]
   },
   "dependencies": {
     "@expo/samples": "^2.0.2",

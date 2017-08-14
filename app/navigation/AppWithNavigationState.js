@@ -9,12 +9,12 @@ import React from 'react';
 import { addNavigationHelpers } from 'react-navigation';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import RootNavigator from './RootNavigation';
-// import MainTabNavigator from './MainTabNavigator';
-// import RootStackNavigator from './RootNavigation';
+import MainTabNavigator from './MainTabNavigator';
 
 const AppWithNavigationState = ({ dispatch, nav }) =>
-  <RootNavigator navigation={addNavigationHelpers({ dispatch, state: nav })} />; // eslint-disable
+  <MainTabNavigator
+    navigation={addNavigationHelpers({ dispatch, state: nav })}
+  />; // eslint-disable
 
 AppWithNavigationState.propTypes = {
   dispatch: PropTypes.func.isRequired,
