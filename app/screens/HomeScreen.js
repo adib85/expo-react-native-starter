@@ -1,4 +1,5 @@
 /* eslint-disable no-undef, global-require, no-else-return */
+
 /**
  * HomeScreen
  *
@@ -15,7 +16,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { WebBrowser } from 'expo';
+// import { WebBrowser } from 'expo';
 
 import { MonoText } from '../components/StyledText';
 
@@ -25,6 +26,7 @@ export default class HomeScreen extends React.Component {
   };
 
   maybeRenderDevelopmentModeWarning() {
+    /* istanbul ignore next */
     if (__DEV__) {
       const learnMoreButton = (
         <Text onPress={this.handleLearnMorePress} style={styles.helpLinkText}>
@@ -39,6 +41,7 @@ export default class HomeScreen extends React.Component {
         </Text>
       );
     } else {
+      /* istanbul ignore next */
       return (
         <Text style={styles.developmentModeText}>
           You are not in development mode, your app will run at full speed.
@@ -48,12 +51,14 @@ export default class HomeScreen extends React.Component {
   }
 
   handleLearnMorePress = () => {
+    /* istanbul ignore next */
     WebBrowser.openBrowserAsync(
       'https://docs.expo.io/versions/latest/guides/development-mode'
     );
   };
 
   handleHelpPress = () => {
+    /* istanbul ignore next */
     WebBrowser.openBrowserAsync(
       'https://docs.expo.io/versions/latest/guides/up-and-running.html#can-t-see-your-changes'
     );
@@ -69,6 +74,7 @@ export default class HomeScreen extends React.Component {
           <View style={styles.welcomeContainer}>
             <Image
               source={
+                /* istanbul ignore next */
                 __DEV__
                   ? require('../assets/images/robot-dev.png')
                   : require('../assets/images/robot-prod.png')

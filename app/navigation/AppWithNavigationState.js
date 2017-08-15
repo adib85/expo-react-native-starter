@@ -1,10 +1,9 @@
 /**
- *
+ * AppWithNavigationState
  *
  * @flow
  */
 
-// import { Notifications } from 'expo';
 import React from 'react';
 import { addNavigationHelpers } from 'react-navigation';
 import { connect } from 'react-redux';
@@ -22,7 +21,7 @@ AppWithNavigationState.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  nav: state.nav,
+  nav: state.get('nav').toJS(),
 });
 
 export default connect(mapStateToProps)(AppWithNavigationState);

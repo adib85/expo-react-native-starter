@@ -10,7 +10,6 @@ import React from 'react';
 import { Platform, StatusBar, StyleSheet, View } from 'react-native';
 import { Provider } from 'react-redux';
 
-// import RootNavigation from './navigation/RootNavigation';
 import AppWithNavigationState from './navigation/AppWithNavigationState';
 import configureStore from './redux/configureStore';
 
@@ -22,7 +21,8 @@ export default class App extends React.Component {
       <Provider store={this.store}>
         <View style={styles.container}>
           {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
-          {Platform.OS === 'android' &&
+          {/* istanbul ignore next */
+          Platform.OS === 'android' &&
             <View style={styles.statusBarUnderlay} />}
           <AppWithNavigationState />
         </View>

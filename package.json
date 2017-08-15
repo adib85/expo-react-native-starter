@@ -32,8 +32,7 @@
     },
     "collectCoverageFrom": [
       "app/**/*.{js,jsx}",
-      "!app/**/*.test.{js,jsx}",
-      "!app/navigation/*"
+      "!app/**/*.test.{js,jsx}"
     ]
   },
   "dependencies": {
@@ -67,6 +66,7 @@
     "prettier": "^1.5.3",
     "react-dom": "16.0.0-alpha.12",
     "redux-devtools": "^3.4.0",
+    "redux-immutable": "^4.0.0",
     "rimraf": "^2.6.1"
   },
   "presets": [

@@ -3,7 +3,6 @@
 /**
  * TabNavigator
  *
- *
  * @flow
  */
 
@@ -34,12 +33,14 @@ export default TabNavigator(
         switch (routeName) {
           case 'Home':
             iconName =
+              /* istanbul ignore next */
               Platform.OS === 'ios'
                 ? `ios-home${focused ? '' : '-outline'}`
                 : 'md-home';
             break;
           case 'Info':
             iconName =
+              /* istanbul ignore next */
               Platform.OS === 'ios'
                 ? `ios-information-circle${focused ? '' : '-outline'}`
                 : 'md-information-circle';
