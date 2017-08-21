@@ -78,12 +78,99 @@ exports[`renders the root 1`] = `
               }
             }
           >
-            <RCTScrollView
-              contentContainerStyle={
-                Object {
-                  "paddingTop": 30,
-                }
+            <View
+              style={
+                Array [
+                  Object {
+                    "marginTop": 50,
+                  },
+                  undefined,
+                ]
               }
+            >
+              <View>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  disabled={false}
+                  ellipsizeMode="tail"
+                >
+                  Username
+                </Text>
+                <TextInput
+                  id="username"
+                  onChangeText={[Function]}
+                  placeholder="mxstbr"
+                  style={
+                    Array [
+                      Object {},
+                      undefined,
+                    ]
+                  }
+                  type="text"
+                  value=""
+                />
+              </View>
+              <View
+                accessibilityComponentType="button"
+                accessibilityLabel="Get repositories"
+                accessibilityTraits={
+                  Array [
+                    "button",
+                  ]
+                }
+                accessible={true}
+                collapsable={undefined}
+                hitSlop={undefined}
+                isTVSelectable={true}
+                nativeID={undefined}
+                onLayout={undefined}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+                testID={undefined}
+                tvParallaxProperties={undefined}
+              >
+                <View
+                  style={
+                    Array [
+                      Object {},
+                    ]
+                  }
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    disabled={false}
+                    ellipsizeMode="tail"
+                    style={
+                      Array [
+                        Object {
+                          "color": "#0C42FD",
+                          "fontSize": 18,
+                          "padding": 8,
+                          "textAlign": "center",
+                        },
+                        Object {
+                          "color": "#841584",
+                        },
+                      ]
+                    }
+                  >
+                    Load
+                  </Text>
+                </View>
+              </View>
+            </View>
+            <View
               style={
                 Object {
                   "backgroundColor": "#fff",
@@ -91,247 +178,9 @@ exports[`renders the root 1`] = `
                 }
               }
             >
-              <View>
-                <View
-                  style={
-                    Object {
-                      "alignItems": "center",
-                      "marginBottom": 20,
-                      "marginTop": 10,
-                    }
-                  }
-                >
-                  <Image
-                    source={1}
-                    style={
-                      Object {
-                        "height": 80,
-                        "marginLeft": -10,
-                        "marginTop": 3,
-                        "resizeMode": "contain",
-                        "width": 100,
-                      }
-                    }
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "alignItems": "center",
-                      "marginHorizontal": 50,
-                    }
-                  }
-                >
-                  <Text
-                    accessible={true}
-                    allowFontScaling={true}
-                    disabled={false}
-                    ellipsizeMode="tail"
-                    style={
-                      Object {
-                        "color": "rgba(0,0,0,0.4)",
-                        "fontSize": 14,
-                        "lineHeight": 19,
-                        "marginBottom": 20,
-                        "textAlign": "center",
-                      }
-                    }
-                  >
-                    Development mode is enabled, your app will be slower but you can use useful development tools. 
-                    <Text
-                      accessible={true}
-                      allowFontScaling={true}
-                      disabled={false}
-                      ellipsizeMode="tail"
-                      onPress={[Function]}
-                      style={
-                        Object {
-                          "color": "#2e78b7",
-                          "fontSize": 14,
-                        }
-                      }
-                    >
-                      Learn more
-                    </Text>
-                  </Text>
-                  <Text
-                    accessible={true}
-                    allowFontScaling={true}
-                    disabled={false}
-                    ellipsizeMode="tail"
-                    style={
-                      Object {
-                        "color": "rgba(96,100,109, 1)",
-                        "fontSize": 17,
-                        "lineHeight": 24,
-                        "textAlign": "center",
-                      }
-                    }
-                  >
-                    Get started by opening
-                  </Text>
-                  <View
-                    style={
-                      Array [
-                        Object {
-                          "backgroundColor": "rgba(0,0,0,0.05)",
-                          "borderRadius": 3,
-                          "paddingHorizontal": 4,
-                        },
-                        Object {
-                          "marginVertical": 7,
-                        },
-                      ]
-                    }
-                  >
-                    <Text
-                      accessible={true}
-                      allowFontScaling={true}
-                      disabled={false}
-                      ellipsizeMode="tail"
-                      style={
-                        Array [
-                          Object {
-                            "color": "rgba(96,100,109, 0.8)",
-                          },
-                        ]
-                      }
-                    >
-                      screens/HomeScreen.js
-                    </Text>
-                  </View>
-                  <Text
-                    accessible={true}
-                    allowFontScaling={true}
-                    disabled={false}
-                    ellipsizeMode="tail"
-                    style={
-                      Object {
-                        "color": "rgba(96,100,109, 1)",
-                        "fontSize": 17,
-                        "lineHeight": 24,
-                        "textAlign": "center",
-                      }
-                    }
-                  >
-                    Change this text and your app will automatically reload.
-                  </Text>
-                </View>
-                <View
-                  style={
-                    Object {
-                      "alignItems": "center",
-                      "marginTop": 15,
-                    }
-                  }
-                >
-                  <View
-                    accessibilityComponentType={undefined}
-                    accessibilityLabel={undefined}
-                    accessibilityTraits={undefined}
-                    accessible={true}
-                    collapsable={undefined}
-                    hitSlop={undefined}
-                    isTVSelectable={true}
-                    nativeID={undefined}
-                    onLayout={undefined}
-                    onResponderGrant={[Function]}
-                    onResponderMove={[Function]}
-                    onResponderRelease={[Function]}
-                    onResponderTerminate={[Function]}
-                    onResponderTerminationRequest={[Function]}
-                    onStartShouldSetResponder={[Function]}
-                    style={
-                      Object {
-                        "opacity": 1,
-                        "paddingVertical": 15,
-                      }
-                    }
-                    testID={undefined}
-                    tvParallaxProperties={undefined}
-                  >
-                    <Text
-                      accessible={true}
-                      allowFontScaling={true}
-                      disabled={false}
-                      ellipsizeMode="tail"
-                      style={
-                        Object {
-                          "color": "#2e78b7",
-                          "fontSize": 14,
-                        }
-                      }
-                    >
-                      Help, it didn’t automatically reload!
-                    </Text>
-                  </View>
-                </View>
-              </View>
-            </RCTScrollView>
-            <View
-              style={
-                Object {
-                  "alignItems": "center",
-                  "backgroundColor": "#fbfbfb",
-                  "bottom": 0,
-                  "left": 0,
-                  "paddingVertical": 20,
-                  "position": "absolute",
-                  "right": 0,
-                  "shadowColor": "black",
-                  "shadowOffset": Object {
-                    "height": -3,
-                  },
-                  "shadowOpacity": 0.1,
-                  "shadowRadius": 3,
-                }
-              }
-            >
-              <Text
-                accessible={true}
-                allowFontScaling={true}
-                disabled={false}
-                ellipsizeMode="tail"
-                style={
-                  Object {
-                    "color": "rgba(96,100,109, 1)",
-                    "fontSize": 17,
-                    "textAlign": "center",
-                  }
-                }
-              >
-                This is a tab bar. You can edit it in:
-              </Text>
-              <View
-                style={
-                  Array [
-                    Object {
-                      "backgroundColor": "rgba(0,0,0,0.05)",
-                      "borderRadius": 3,
-                      "paddingHorizontal": 4,
-                    },
-                    Object {
-                      "marginTop": 5,
-                    },
-                  ]
-                }
-              >
-                <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  disabled={false}
-                  ellipsizeMode="tail"
-                  style={
-                    Array [
-                      Object {
-                        "color": "rgba(96,100,109, 0.8)",
-                      },
-                    ]
-                  }
-                >
-                  navigation/MainTabNavigator.js
-                </Text>
-              </View>
+              <RCTScrollView>
+                <View />
+              </RCTScrollView>
             </View>
           </View>
         </View>
