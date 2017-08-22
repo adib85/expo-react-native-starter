@@ -9,14 +9,14 @@
 import React from 'react';
 import { Platform } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { StackNavigator, TabBarBottom } from 'react-navigation';
+import { TabNavigator, TabBarBottom } from 'react-navigation';
 
 import Colors from '../constants/Colors';
 
 import HomeScreen from '../screens/HomeScreen/index';
 import SettingsScreen from '../screens/InfoScreen/index';
 
-export default StackNavigator(
+export default TabNavigator(
   {
     Home: {
       screen: HomeScreen,
