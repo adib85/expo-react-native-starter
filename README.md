@@ -22,6 +22,7 @@
 
   <a href="https://github.com/storybooks/storybook">Storybook<a/> for component style guide
 
+
   ## Quick start
 
 1. Clone this repo using `git clone https://github.com/adib85/expo-react-native-starter.git`
