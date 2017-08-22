@@ -1,8 +1,8 @@
 {
-  "expoServerPort": 19000,
-  "packagerPort": 19003,
-  "packagerPid": 50460,
-  "expoServerNgrokUrl": "https://6u-yar.adi-b85.starter.exp.direct",
-  "packagerNgrokUrl": "https://packager.6u-yar.adi-b85.starter.exp.direct",
-  "ngrokPid": 50495
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null
 }

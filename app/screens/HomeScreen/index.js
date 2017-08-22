@@ -15,7 +15,6 @@ import {
   View,
   Button,
 } from 'react-native';
-// import { WebBrowser } from 'expo';
 
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
@@ -43,11 +42,6 @@ export class HomeScreen extends React.Component {
 
   render() {
     const { loading, error, repos } = this.props;
-    // const reposListProps = {
-    //   loading,
-    //   error,
-    //   repos,
-    // };
 
     return (
       <View style={styles.container}>
